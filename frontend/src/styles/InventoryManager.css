@@ -1,0 +1,63 @@
+.inventory-manager {
+  padding: 20px;
+}
+
+.inventory-filters {
+  margin-bottom: 20px;
+}
+
+.inventory-filters select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.inventory-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.status-indicator {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+}
+
+.item-details {
+  color: #666;
+}
+
+.item-details p {
+  margin: 5px 0;
+}
+
+.reorder-btn {
+  margin-top: 15px;
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.reorder-btn:hover {
+  background: #1976D2;
+} 

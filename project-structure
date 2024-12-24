@@ -1,0 +1,13 @@
+drone-pharmacy/
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── assets/
+│       └── styles/
+└── backend/
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    └── config/ 

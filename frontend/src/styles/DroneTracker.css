@@ -1,0 +1,55 @@
+.drone-tracker {
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.status-info {
+  margin: 20px 0;
+}
+
+.status {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.eta {
+  color: #666;
+  margin: 10px 0;
+}
+
+.drone-id {
+  color: #888;
+  font-size: 14px;
+}
+
+.location-map {
+  margin-top: 20px;
+  height: 200px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder {
+  text-align: center;
+  color: #666;
+} 
