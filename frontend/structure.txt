@@ -1,0 +1,27 @@
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── DroneMap/             # 无人机地图组件
+│   │   ├── OrderTracking/        # 订单追踪组件
+│   │   ├── MedicineList/        # 药品列表组件
+│   │   ├── UserDashboard/       # 用户面板组件
+│   │   ├── WeatherAlert/      # 天气预警组件
+│   │   ├── PrescriptionForm/  # 处方表单
+│   │   └── PaymentModule/     # 支付模块
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── OrderPage.js
+│   │   ├── AdminDashboard.js
+│   │   └── UserProfile.js
+│   ├── services/
+│   │   ├── api.js               # API 调用
+│   │   └── mapService.js        # 地图服务
+│   ├── utils/
+│   │   ├── auth.js
+│   │   └── constants.js 
+│   ├── store/
+│   │   ├── actions/
+│   │   ├── reducers/
+│   │   └── index.js 
+│   ├── router/
+│   │   └── index.js 

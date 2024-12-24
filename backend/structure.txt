@@ -1,0 +1,32 @@
+backend/
+├── src/
+│   ├── controllers/
+│   │   ├── DroneController.js      # 无人机控制
+│   │   ├── OrderController.js      # 订单管理
+│   │   ├── MedicineController.js   # 药品管理
+│   │   └── UserController.js       # 用户管理
+│   ├── models/
+│   │   ├── Drone.js               # 无人机模型
+│   │   ├── Order.js              # 订单模型
+│   │   ├── Medicine.js           # 药品模型
+│   │   └── User.js              # 用户模型
+│   ├── routes/
+│   │   ├── droneRoutes.js
+│   │   ├── orderRoutes.js
+│   │   ├── medicineRoutes.js
+│   │   └── userRoutes.js
+│   ├── services/
+│   │   ├── DroneService.js       # 无人机业务逻辑
+│   │   ├── OrderService.js       # 订单业务逻辑
+│   │   └── DeliveryService.js    # 配送业务逻辑
+│   └── utils/
+│       ├── database.js
+│       └── validation.js 
+├── config/
+│   ├── config.js          # 环境配置
+│   ├── database.js        # 数据库配置
+│   └── drone-config.js    # 无人机相关配置 
+├── middleware/
+│   ├── auth.js           # 认证中间件
+│   ├── errorHandler.js   # 错误处理
+│   └── validation.js     # 请求验证 
