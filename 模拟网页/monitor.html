@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>实时监控 - 智能无人机药品配送管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=xgLFdRtoeZmGMlDkrh7Heny9wwdcFJsC"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>实时监控</h1>
+            <nav>
+                <a href="index.html" class="back-btn">返回主页</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="monitor-controls">
+                <div class="control-group">
+                    <button class="active" data-status="all">全部无人机</button>
+                    <button data-status="delivering">配送中</button>
+                    <button data-status="standby">待命</button>
+                    <button data-status="charging">充电中</button>
+                </div>
+                <div class="weather-info">
+                    <span>天气：晴 温度：25℃ 风速：3级</span>
+                    <span class="time">更新时间：<span id="current-time"></span></span>
+                </div>
+            </div>
+
+            <div class="monitor-container">
+                <div id="map" class="monitor-map"></div>
+                <div class="monitor-sidebar">
+                    <div class="drone-list">
+                        <h3>无人机状态 (<span id="drone-count">0</span>)</h3>
+                        <div class="drone-items">
+                            <!-- 无人机列表将由JS动态生成 -->
+                        </div>
+                    </div>
+                    <div class="route-info">
+                        <h3>配送路线信息</h3>
+                        <div class="route-details">
+                            <div id="selected-drone-info">
+                                <!-- 选中的无人机信息将在这里显示 -->
+                                <p class="hint">点击地图上的无人机查看详细信息</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="monitor.js"></script>
+</body>
+</html> 

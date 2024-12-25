@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>配送调度 - 智能无人机药品配送管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>配送调度</h1>
+            <nav>
+                <a href="index.html" class="back-btn">返回主页</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="dispatch-header">
+                <div class="dispatch-summary">
+                    <div class="summary-card">
+                        <h3>今日订单</h3>
+                        <div class="number">128</div>
+                        <div class="trend positive">↑ 12%</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>配送中</h3>
+                        <div class="number">15</div>
+                        <div class="trend">实时</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>待分配</h3>
+                        <div class="number">8</div>
+                        <div class="trend negative">需处理</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>可用无人机</h3>
+                        <div class="number">12</div>
+                        <div class="trend">空闲中</div>
+                    </div>
+                </div>
+
+                <div class="dispatch-controls">
+                    <button class="btn-primary">新建订单</button>
+                    <div class="search-box">
+                        <input type="text" placeholder="搜索订单号、配送地址...">
+                        <button class="btn-search">搜索</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dispatch-grid">
+                <div class="active-orders">
+                    <div class="section-header">
+                        <h3>实时订单</h3>
+                        <div class="order-filters">
+                            <button class="active" data-status="all">全部</button>
+                            <button data-status="pending">待分配</button>
+                            <button data-status="delivering">配送中</button>
+                            <button data-status="completed">已完成</button>
+                        </div>
+                    </div>
+                    <div id="orders-list" class="orders-container">
+                        <!-- 订单列表将通过JS动态生成 -->
+                    </div>
+                </div>
+
+                <div class="drone-status">
+                    <div class="section-header">
+                        <h3>无人机状态</h3>
+                        <div class="drone-filters">
+                            <button class="active" data-status="all">全部</button>
+                            <button data-status="available">可用</button>
+                            <button data-status="delivering">配送中</button>
+                            <button data-status="charging">充电中</button>
+                        </div>
+                    </div>
+                    <div id="drones-list" class="drones-container">
+                        <!-- 无人机列表将通过JS动态生成 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新建订单模态框 -->
+            <div id="new-order-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>新建配送订单</h3>
+                        <button class="btn-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="new-order-form">
+                            <div class="form-group">
+                                <label>收货地址</label>
+                                <input type="text" placeholder="请输入详细地址">
+                            </div>
+                            <div class="form-group">
+                                <label>联系电话</label>
+                                <input type="tel" placeholder="请输入联系电话">
+                            </div>
+                            <div class="form-group">
+                                <label>药品信息</label>
+                                <select>
+                                    <option value="">请选择药品</option>
+                                    <option value="1">青霉素</option>
+                                    <option value="2">布洛芬</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>配送优先级</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="priority" value="normal">
+                                        普通配送
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="priority" value="urgent">
+                                        加急配送
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-cancel">取消</button>
+                        <button class="btn-submit">确认创建</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dispatch.js"></script>
+</body>
+</html> 

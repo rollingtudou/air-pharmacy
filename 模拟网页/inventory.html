@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>库存管理 - 智能无人机药品配送管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>库存管理</h1>
+            <nav>
+                <a href="index.html" class="back-btn">返回主页</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="inventory-header">
+                <div class="inventory-summary">
+                    <div class="summary-card">
+                        <h3>总库存药品</h3>
+                        <div class="number">1,286</div>
+                        <div class="trend positive">↑ 较上月增加86</div>
+                    </div>
+                    <div class="summary-card warning">
+                        <h3>库存预警</h3>
+                        <div class="number">5</div>
+                        <div class="trend">需要补货</div>
+                    </div>
+                    <div class="summary-card danger">
+                        <h3>即将过期</h3>
+                        <div class="number">3</div>
+                        <div class="trend">30天内</div>
+                    </div>
+                </div>
+
+                <div class="inventory-controls">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜索药品名称、编号...">
+                        <button class="btn-search">搜索</button>
+                    </div>
+                    <div class="filter-controls">
+                        <select class="category-select">
+                            <option>全部分类</option>
+                            <option>处方药</option>
+                            <option>非处方药</option>
+                            <option>医疗器械</option>
+                            <option>急救药品</option>
+                        </select>
+                        <button class="btn-add">新增药品</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-grid">
+                <div class="inventory-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>药品名称</th>
+                                <th>类别</th>
+                                <th>当前库存</th>
+                                <th>安全库存</th>
+                                <th>有效期至</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="medicine-info">
+                                        <span class="medicine-name">青霉素</span>
+                                        <span class="medicine-tag urgent">紧急</span>
+                                    </div>
+                                </td>
+                                <td>处方药</td>
+                                <td>150</td>
+                                <td>100</td>
+                                <td>2024-12-31</td>
+                                <td><span class="status normal">正常</span></td>
+                                <td>
+                                    <button class="btn-restock">补货</button>
+                                    <button class="btn-detail">详情</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="medicine-info">
+                                        <span class="medicine-name">肾上腺素</span>
+                                        <span class="medicine-tag urgent">紧急</span>
+                                    </div>
+                                </td>
+                                <td>急救药品</td>
+                                <td>50</td>
+                                <td>100</td>
+                                <td>2024-09-30</td>
+                                <td><span class="status warning">偏低</span></td>
+                                <td>
+                                    <button class="btn-restock">补货</button>
+                                    <button class="btn-detail">详情</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="medicine-info">
+                                        <span class="medicine-name">硝酸甘油</span>
+                                        <span class="medicine-tag urgent">紧急</span>
+                                    </div>
+                                </td>
+                                <td>急救药品</td>
+                                <td>80</td>
+                                <td>150</td>
+                                <td>2024-08-15</td>
+                                <td><span class="status warning">偏低</span></td>
+                                <td>
+                                    <button class="btn-restock">补货</button>
+                                    <button class="btn-detail">详情</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="medicine-info">
+                                        <span class="medicine-name">布洛芬</span>
+                                    </div>
+                                </td>
+                                <td>非处方药</td>
+                                <td>80</td>
+                                <td>200</td>
+                                <td>2024-11-30</td>
+                                <td><span class="status warning">偏低</span></td>
+                                <td>
+                                    <button class="btn-restock">补货</button>
+                                    <button class="btn-detail">详情</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="medicine-info">
+                                        <span class="medicine-name">胰岛素</span>
+                                        <span class="medicine-tag urgent">紧急</span>
+                                    </div>
+                                </td>
+                                <td>处方药</td>
+                                <td>120</td>
+                                <td>100</td>
+                                <td>2024-10-31</td>
+                                <td><span class="status normal">正常</span></td>
+                                <td>
+                                    <button class="btn-restock">补货</button>
+                                    <button class="btn-detail">详情</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="inventory-charts">
+                    <div class="chart-container">
+                        <h3>重点药品库存趋势</h3>
+                        <div id="inventory-trend-chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>库存分类统计</h3>
+                        <div id="inventory-category-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="inventory.js"></script>
+</body>
+</html> 

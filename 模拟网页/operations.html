@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>运营数据 - 智能无人机药品配送管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>运营数据</h1>
+            <nav>
+                <a href="index.html" class="back-btn">返回主页</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>今日配送</h3>
+                    <div class="stat-number">128</div>
+                    <div class="stat-trend positive">↑ 12%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>在途订单</h3>
+                    <div class="stat-number">15</div>
+                    <div class="stat-trend">实时</div>
+                </div>
+                <div class="stat-card">
+                    <h3>可用无人机</h3>
+                    <div class="stat-number">25</div>
+                    <div class="stat-trend negative">↓ 2台维护中</div>
+                </div>
+                <div class="stat-card">
+                    <h3>平均配送时间</h3>
+                    <div class="stat-number">18分钟</div>
+                    <div class="stat-trend positive">↓ 2分钟</div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h3>配送量趋势</h3>
+                    <div id="delivery-trend-chart" class="chart"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>区域分布</h3>
+                    <div id="area-distribution-chart" class="chart"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="operations.js"></script>
+</body>
+</html> 
