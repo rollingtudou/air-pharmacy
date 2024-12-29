@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/rollingtudou/air-pharmacy)](https://github.com/rollingtudou/air-pharmacy/stargazers)
-[![Build Status](https://github.com/rollingtudou/air-pharmacy/workflows/CI/badge.svg)](https://github.com/rollingtudou/air-pharmacy/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
 基于 React + Node.js + MongoDB 的智能无人机药品配送管理系统，专注于解决医疗资源分布不均、应急配送效率等问题，助力智慧城市建设与低空经济发展。
