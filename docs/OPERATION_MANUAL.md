@@ -250,9 +250,8 @@ mongorestore /backup/20240101
 3. 清理日志文件
 
 ### 6.2 紧急联系方式
-- 技术支持：support@example.com
-- 运维电话：+86-xxx-xxxx-xxxx
-- 值班人员：[内部链接]
+- 技术支持：fengk677@gmail.com
+- 运维电话：+86-139-9177-0359
 
 ## 7. 安全规范
 
